@@ -1,2 +1,13 @@
 @use "./styles/fonts";
 @use "./styles/variables" as variables;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1304px;
+  width: 100%;
+  padding: 0 12px;
+  margin: 0 auto;
+}

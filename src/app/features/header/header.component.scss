@@ -1,0 +1,53 @@
+@use "../../../styles/variables" as variables;
+
+.header-main {
+  &__logo {
+    margin-right: 64px;
+
+    img {
+      display: block;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 32px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: variables.$text-main-color;
+    font-family: variables.$font-family-primary;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: left;
+  }
+
+  &__button-wallet {
+    border: none;
+    background-color: variables.$text-main-color;
+    border-radius: 77px;
+    max-width: 132px;
+    width: 100%;
+    padding: 17px 0;
+    color: variables.$white;
+    font-family: variables.$font-family-primary;;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0;
+    text-align: center;
+    margin-left: auto;
+    cursor: pointer;
+  }
+}
