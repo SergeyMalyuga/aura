@@ -1,17 +1,41 @@
 @use "../../../styles/variables" as variables;
 
 .header-main {
+  padding: 15px 0;
+
   &__logo {
     margin-right: 64px;
 
+    @media (width <= 768px) {
+      width: clamp(4.6875rem, 3.2723rem + 6.2035vw, 6.25rem);;
+      margin-left: 15px;
+    }
+
     img {
       display: block;
+      width: 100%;
+      height: auto;
     }
   }
 
   &__content {
     display: flex;
     align-items: center;
+
+    @media (width <= 768px) {
+      flex-wrap: wrap;
+      padding: 0;
+    }
+  }
+
+  &__nav {
+    @media (width <= 768px) {
+      border-top: 1px solid variables.$grey-light;
+      width: 100%;
+      margin-top: 20px;
+      padding: 10px 0;
+      order: 3;
+    }
   }
 
   &__list {
@@ -20,6 +44,10 @@
     padding: 0;
     display: flex;
     gap: 32px;
+
+    @media (width <= 768px) {
+      justify-content: center;
+    }
   }
 
   &__link {
@@ -31,6 +59,29 @@
     line-height: 24px;
     letter-spacing: 0;
     text-align: left;
+    transition: color 0.3s ease;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline-color: variables.$link-active;
+      outline-offset: 2px;
+      outline-style: solid;
+    }
+
+    &:hover {
+      color: variables.$link-hover;
+    }
+
+    &:active {
+      color: variables.$link-active;
+    }
+
+    @media (width <= 768px) {
+      font-size: clamp(1rem, 0.7736rem + 0.9926vw, 1.25rem);
+    }
   }
 
   &__button-wallet {
@@ -44,10 +95,64 @@
     font-family: variables.$font-family-primary;;
     font-size: 16px;
     font-weight: 700;
-    line-height: 16px;
+    line-height: 1em;
     letter-spacing: 0;
     text-align: center;
     margin-left: auto;
     cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid variables.$link-active;
+      outline-offset: 4px;
+
+    }
+
+    &:hover {
+      background-color: variables.$link-hover;
+      color: variables.$text-main-color;
+    }
+
+    &:active {
+      background-color: variables.$link-active;
+      color: variables.$text-main-color;
+    }
+
+    svg {
+      display: none;
+    }
+
+    @media (width <= 768px) {
+      width: 36px;
+      height: 36px;
+      border-radius: 0;
+      padding: 0;
+      background-color: transparent;
+      color: variables.$text-main-color;
+      margin-right: 12px;
+
+
+      &:hover {
+        background-color: transparent;
+        color: variables.$link-hover;
+      }
+
+      &:active {
+        background-color: transparent;
+        color: variables.$link-active;
+      }
+
+      span {
+        display: none;
+      }
+
+      svg {
+        display: block;
+      }
+    }
   }
 }

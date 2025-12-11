@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <symbol id="header-wallet" viewBox="0 0 36 36" width="36.000000"
+           height="36.000000" fill="none">
+    <rect id="account_balance_wallet" width="36.000000" height="36.000000" x="0.000000" y="0.000000"/>
+    <path id="Vector" d="M0 0L36 0L36 36L0 36L0 0Z" fill-rule="nonzero"/>
+    <path id="Vector"
+          d="M31.5 27L31.5 31.5L4.5 31.5L4.5 4.5L31.5 4.5L31.5 9L15 9L15 27L31.5 27ZM18 24L33 24L33 12L18 12L18 24ZM24 20.25C22.755 20.25 21.75 19.245 21.75 18C21.75 16.755 22.755 15.75 24 15.75C25.245 15.75 26.25 16.755 26.25 18C26.25 19.245 25.245 20.25 24 20.25Z"
+          fill="currentColor" fill-rule="nonzero"/>
+  </symbol>
+
+</svg>
