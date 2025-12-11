@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Russo One";
+  src: url("../assets/fonts/russo-one-regular.woff2") format("woff2"),
+  url("../assets/fonts/russo-one-regular.woff") format("woff"),
+  url("../assets/fonts/russo-one-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Muller;
+  src: url("../assets/fonts/muller-bold.woff2") format("woff2"),
+  url("../assets/fonts/muller-bold.woff") format("woff"),
+  url("../assets/fonts/muller-bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
