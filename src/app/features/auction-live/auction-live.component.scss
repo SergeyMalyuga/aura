@@ -1,0 +1,121 @@
+@use "../../../styles/variables";
+
+
+.container {
+  padding: 90px 12px;
+}
+
+.auction-live {
+  &__content {
+    display: flex;
+    gap: 32px;
+  }
+
+&__title {
+  &-main {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin: 0 0 32px;
+    color: variables.$text-main-color;
+    font-family: variables.$font-family-secondary;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 72px;
+    letter-spacing: 0;
+    text-align: left;
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14.5px;
+      color: variables.$red;
+      font-family: variables.$font-family-primary;
+      border: 2px solid variables.$red;
+      border-radius: 40px;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 100%;
+      letter-spacing: 0;
+      text-align: center;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: variables.$red;
+      }
+    }
+  }
+
+  &-region {
+    margin: 0;
+    color: variables.$text-main-color;
+    font-family: variables.$font-family-primary;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 58px;
+    letter-spacing: 0;
+    text-align: left;
+    order: 2;
+  }
+}
+
+  &__wrapper {
+    &-image {
+      max-width: 460px;
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+
+    &-avatar {
+      max-width: 48px;
+      width: 100%;
+
+      @media (width <= 768px) {
+        width: clamp(1.5rem, 0.1414rem + 5.9553vw, 3rem);;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+
+    &-bet {
+      display: flex;
+      gap: 32px;
+      flex-direction: column;
+    }
+  }
+
+  &__owner {
+    display: flex;
+    max-width: 228px;
+    width: 100%;
+    align-items: center;
+    gap: 16px;
+    padding: 11px 16px ;
+    border-radius: 23px;
+    background: variables.$grey;
+
+    span {
+      color: variables.$text-main-color;
+      font-family: variables.$font-family-primary;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 100%;
+      letter-spacing: 0;
+      text-align: left;
+    }
+  }
+}

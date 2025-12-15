@@ -17,3 +17,13 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: Muller;
+  src: url("../assets/fonts/muller-regular.woff2") format("woff2"),
+  url("../assets/fonts/muller-regular.woff") format("woff"),
+  url("../assets/fonts/muller-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
