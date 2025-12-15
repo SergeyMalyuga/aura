@@ -12,9 +12,21 @@
     background: black url("../../../assets/images/raster/hero-bg-1024.png") no-repeat right;
   }
 
+  @media (width <= 768px) {
+    padding: clamp(4rem, -1.4342rem + 23.8213vw, 10rem) 0 210px;
+  }
+
+  @media (width <= 450px) {
+    background: black url("../../../assets/images/raster/hero-bg-768.png") no-repeat bottom center;
+  }
+
   &__content {
     @media (width <= 1024px) {
       padding: 0 36px;
+    }
+
+    @media (width <= 768px) {
+      padding: 0 clamp(0.75rem, -0.6086rem + 5.9553vw, 2.25rem);;
     }
   }
 
@@ -26,18 +38,25 @@
       font-family: variables.$font-family-secondary;
       font-size: 70px;
       font-weight: 400;
-      line-height: 84px;
+      line-height:100%;
       letter-spacing: 0;
       text-align: left;
       margin: 0 0 36px;
+
+      @media (width <= 768px) {
+        font-size: clamp(1.9375rem, -0.2702rem + 9.6774vw, 4.375rem);
+        margin: 0 0 clamp(1rem, -0.1321rem + 4.9628vw, 2.25rem);
+      }
     }
   }
 
   &__button {
     &-buy {
       border: none;
+      max-width: 176px;
+      width: 100%;
       border-radius: 40px;
-      padding: 25px 54px;
+      padding: 25px 54px; //TODO изменить отступы с 768px
       background: variables.$button-gradient;
       color: variables.$text-main-color;
       font-family: variables.$font-family-primary;
@@ -48,19 +67,31 @@
       text-align: center;
       margin-right: 32px;
       cursor: pointer;
+
+      @media (width <= 768px) {
+        margin: 0 0 clamp(1rem, 0.0943rem + 3.9702vw, 2rem);
+        font-size: clamp(1rem, 0.7736rem + 0.9926vw, 1.25rem);
+        padding: clamp(1.0625rem, 0.6096rem + 1.9851vw, 1.5625rem) clamp(2.406rem, 1.5288rem + 3.8462vw, 3.375rem) ;
+      }
     }
 
     &-author {
+      max-width: 247px;
+      width: 100%;
       border: none;
       background: variables.$button-gradient;
       padding: 5px;
       border-radius: 40px;
       overflow: hidden;
 
+      @media (width <= 768px) {
+        display: block;
+      }
+
       span {
         color: variables.$white;
         display: block;
-        padding: 20px 54px;
+        padding: 20px 49px;
         background: black;
         border-radius: 35px;
         font-family: variables.$font-family-primary;
@@ -70,6 +101,11 @@
         letter-spacing: 0;
         text-align: center;
         cursor: pointer;
+
+        @media (width <= 768px) {
+          font-size: clamp(1rem, 0.7736rem + 0.9926vw, 1.25rem);
+          padding: clamp(0.75rem, 0.2971rem + 1.9851vw, 1.25rem) clamp(1.3437rem, -0.2129rem + 6.8238vw, 3.0625rem);
+        }
       }
     }
   }

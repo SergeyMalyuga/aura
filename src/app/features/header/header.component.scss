@@ -3,11 +3,15 @@
 .header-main {
   padding: 15px 0;
 
+  @media (width <= 768px) {
+    padding: 15px 0 0;
+  }
+
   &__logo {
     margin-right: 64px;
 
     @media (width <= 768px) {
-      width: clamp(4.6875rem, 3.2723rem + 6.2035vw, 6.25rem);;
+      width: clamp(4.6875rem, 3.2723rem + 6.2035vw, 6.25rem);
       margin-left: 15px;
     }
 
@@ -92,7 +96,7 @@
     width: 100%;
     padding: 17px 0;
     color: variables.$white;
-    font-family: variables.$font-family-primary;;
+    font-family: variables.$font-family-primary;
     font-size: 16px;
     font-weight: 700;
     line-height: 1em;
