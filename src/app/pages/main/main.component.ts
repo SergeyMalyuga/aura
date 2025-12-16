@@ -2,13 +2,15 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import {HeaderComponent} from '../../features/header/header.component';
 import {HeroComponent} from '../../features/hero/hero.component';
 import {AuctionLiveComponent} from '../../features/auction-live/auction-live.component';
+import {AuctionsGalleryComponent} from '../../features/auctions-gallery/auctions-gallery.component';
 
 @Component({
   selector: 'app-main',
   imports: [
     HeaderComponent,
     HeroComponent,
-    AuctionLiveComponent
+    AuctionLiveComponent,
+    AuctionsGalleryComponent
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',
