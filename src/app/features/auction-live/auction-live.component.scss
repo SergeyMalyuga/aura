@@ -3,71 +3,132 @@
 
 .container {
   padding: 90px 12px;
+
+  @media (width <= 1024px) {
+    padding-left: clamp(0.75rem, -0.0808rem + 3.6419vw, 2.25rem);
+    padding-right: clamp(0.75rem, -0.0808rem + 3.6419vw, 2.25rem);
+  }
 }
 
 .auction-live {
   &__content {
     display: flex;
     gap: 32px;
+
+    @media (width <= 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
-&__title {
-  &-main {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    margin: 0 0 32px;
-    color: variables.$text-main-color;
-    font-family: variables.$font-family-secondary;
-    font-size: 60px;
-    font-weight: 400;
-    line-height: 72px;
-    letter-spacing: 0;
-    text-align: left;
-
-    span {
+  &__title {
+    &-main {
       display: flex;
+      gap: 16px;
       align-items: center;
-      gap: 6px;
-      padding: 8px 14.5px;
-      color: variables.$red;
+      margin: 0 0 32px;
+      color: variables.$text-main-color;
+      font-family: variables.$font-family-secondary;
+      font-size: 60px;
+      font-weight: 400;
+      line-height: 72px;
+      letter-spacing: 0;
+      text-align: left;
+
+      @media (width <= 768px) {
+        font-size: clamp(1.875rem, 0.1768rem + 7.4442vw, 3.75rem);
+        line-height: clamp(2.25rem, 0.2122rem + 8.933vw, 4.5rem);;
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 14.5px;
+        color: variables.$red;
+        font-family: variables.$font-family-primary;
+        border: 2px solid variables.$red;
+        border-radius: 40px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 100%;
+        letter-spacing: 0;
+        text-align: center;
+
+        @media (width <= 768px) {
+          font-size: clamp(0.75rem, 0.5236rem + 0.9926vw, 1rem);
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: variables.$red;
+        }
+      }
+    }
+
+    &-region {
+      margin: 0;
+      color: variables.$text-main-color;
       font-family: variables.$font-family-primary;
-      border: 2px solid variables.$red;
-      border-radius: 40px;
-      font-size: 16px;
-      font-weight: 700;
+      font-size: 48px;
+      font-weight: 400;
       line-height: 100%;
       letter-spacing: 0;
-      text-align: center;
+      text-align: left;
+      order: 2;
 
-      &::before {
-        content: "";
-        display: block;
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background-color: variables.$red;
+      @media (width <= 768px) {
+        font-size: clamp(1.875rem, 0.8561rem + 4.4665vw, 3rem);
       }
     }
   }
 
-  &-region {
-    margin: 0;
-    color: variables.$text-main-color;
-    font-family: variables.$font-family-primary;
-    font-size: 48px;
-    font-weight: 400;
-    line-height: 58px;
-    letter-spacing: 0;
-    text-align: left;
-    order: 2;
+  &__timer {
+    &-part {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    &-value {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 100%;
+      letter-spacing: 0;
+      text-align: left;
+
+      @media (width <= 768px) {
+        font-size: clamp(1.875rem, 0.8561rem + 4.4665vw, 3rem);
+      }
+    }
+
+    &-text {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 100%;
+      letter-spacing: 0;
+      text-align: left;
+
+      @media (width <= 768px) {
+        font-size: clamp(1rem, 0.7736rem + 0.9926vw, 1.25rem);
+      }
+    }
   }
-}
 
   &__wrapper {
     &-image {
       max-width: 460px;
       width: 100%;
+
+      @media (width <= 1024px) {
+        max-width: clamp(18.75rem, -301.5726rem + 516.129vw, 28.75rem);
+        width: 100%;
+      }
 
       img {
         width: 100%;
@@ -91,10 +152,25 @@
       }
     }
 
-    &-bet {
+    &-auction {
+      width: 100%;
       display: flex;
       gap: 32px;
       flex-direction: column;
+
+      @media (width <= 768px) {
+        gap: clamp(1rem, 0.0943rem + 3.9702vw, 2rem);
+        align-items: center;
+      }
+    }
+
+    &-timer {
+      display: flex;
+      flex-wrap: wrap;
+
+      .auction-live__timer-part:not(:last-child) {
+        margin-right: 26px;
+      }
     }
   }
 
@@ -104,7 +180,7 @@
     width: 100%;
     align-items: center;
     gap: 16px;
-    padding: 11px 16px ;
+    padding: 11px 16px;
     border-radius: 23px;
     background: variables.$grey;
 
@@ -116,6 +192,191 @@
       line-height: 100%;
       letter-spacing: 0;
       text-align: left;
+
+      @media (width <= 768px) {
+        font-size: clamp(1rem, 0.7736rem + 0.9926vw, 1.25rem);
+      }
+    }
+
+    @media (width <= 768px) {
+      width: clamp(10.625rem, 7.3418rem + 14.3921vw, 14.25rem);;
+    }
+  }
+
+  &__auction-info {
+    display: flex;
+    gap: 32px;
+    font-family: variables.$font-family-primary;
+    order: 3;
+
+    @media (width <= 1422px) {
+      flex-direction: column;
+    }
+
+    @media (width <= 768px) {
+      gap: clamp(1rem, 0.0943rem + 3.9702vw, 2rem);
+      align-items: center;
+    }
+  }
+
+  &__auction-bet {
+    display: flex;
+    flex-direction: column;
+    max-width: 296px;
+    width: 100%;
+    padding: 32px;
+    border-radius: 40px;
+    background: variables.$grey;
+
+    @media (width <= 768px) {
+      width: clamp(10.875rem, 3.969rem + 30.273vw, 18.5rem);
+      padding: clamp(1rem, 0.0943rem + 3.9702vw, 2rem);
+    }
+  }
+
+  &__auction {
+    &-subtitle {
+      color: variables.$text-main-color;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 100%;
+      letter-spacing: 0;
+      text-align: left;
+      margin-bottom: 16px;
+
+      @media (width <= 768px) {
+        font-size: clamp(1rem, 0.7736rem + 0.9926vw, 1.25rem);
+      }
+    }
+
+    &-price {
+      color: variables.$text-main-color;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 100%;
+      letter-spacing: 0;
+      text-align: left;
+      margin-bottom: 6px;
+
+      @media (width <= 768px) {
+        font-size: clamp(1.875rem, 0.8561rem + 4.4665vw, 3rem);
+      }
+    }
+
+    &-price-dollar {
+      color: variables.$grey-middle;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 100%;
+      letter-spacing: 0;
+      text-align: left;
+
+      @media (width <= 768px) {
+        font-size: clamp(1rem, 0.7736rem + 0.9926vw, 1.25rem);
+      }
+    }
+
+    &-timer {
+      display: grid;
+      grid-template-columns: 1fr 121px;
+      gap: 44px;
+      background-color: variables.$text-main-color;
+      color: variables.$white;
+      border-radius: 40px;
+      max-width: 460px;
+      width: 100%;
+      padding: 32px;
+
+      .auction-live__auction-subtitle {
+        width: 100%;
+        color: variables.$white;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        top: 0;
+        right: 0;
+        width: 107px;
+        height: 107px;
+        background-image: url("../../../assets/images/vector/auction-live-alarm-clock.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      @media (width <= 987px) {
+        grid-template-columns: 1fr;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      @media (width <= 768px) {
+        width:  clamp(12.5rem, -2.2177rem + 64.5161vw, 28.75rem);
+        padding: clamp(1rem, 0.0943rem + 3.9702vw, 2rem);
+      }
+    }
+  }
+
+  &__button {
+    position: relative;
+    max-width: 296px;
+    width: 100%;
+    border: none;
+    background-color: variables.$link-hover;
+    padding: 25px 54px;
+    border-radius: 40px;
+    order: 4;
+    z-index: 1;
+    color: variables.$text-main-color;
+    font-family: variables.$font-family-primary;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
+    cursor: pointer;
+
+    &::before, &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 40px;
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 0.3s ease;
+    }
+
+    &::before {
+      background: variables.$button-gradient;
+    }
+
+    &::after {
+      background: variables.$link-active;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    @media (width <= 768px) {
+      font-size: clamp(1rem, 0.7736rem + 0.9926vw, 1.25rem);
+      width: clamp(12.5rem, 7.0658rem + 23.8213vw, 18.5rem);
+      padding: clamp(0.9375rem, 0.3714rem + 2.4814vw, 1.5625rem) clamp(1.625rem, 0.04rem + 6.9479vw, 3.375rem);
     }
   }
 }

@@ -2,20 +2,45 @@
   <div class="container">
     <h2 class="auction-live__title-main">
       Аукцион
-      <span>Live auction</span>
+      <span lang="en">Live auction</span>
     </h2>
     <div class="auction-live__content">
       <div class="auction-live__wrapper-image">
-        <img src="./assets/images/raster/auction-live-witcher.png" width="460" height="260" alt="Стикер 'Witcher'">
+        <img src="./assets/images/raster/auction-live-witcher.png" width="460" height="460" alt="Стикер 'Witcher'">
       </div>
-      <div class="auction-live__wrapper-bet" role="region">
-        <h3 class="auction-live__title-region">Witcherrr_3 (xml_t5)</h3>
+      <div class="auction-live__wrapper-auction" role="region" aria-labelledby="auction-live-title-region">
+        <h3 id="auction-live-title-region" class="auction-live__title-region">Witcherrr_3 (xml_t5)</h3>
         <div class="auction-live__owner">
           <div class="auction-live__wrapper-avatar">
             <img src="./assets/images/raster/auction-live-avatar.png" width="48" height="48" alt="Аватар Serge_VM222">
           </div>
           <span>Serge_VM222</span>
         </div>
+        <div class="auction-live__auction-info">
+          <div class="auction-live__auction-bet">
+            <span class="auction-live__auction-subtitle">Ставка:</span>
+            <span class="auction-live__auction-price">0.10 ETH</span>
+            <span class="auction-live__auction-price-dollar">$351.24</span>
+          </div>
+          <div class="auction-live__auction-timer">
+            <div class="auction-live__wrapper-timer">
+              <span class="auction-live__auction-subtitle">Окончание через:</span>
+              <div class="auction-live__timer-part">
+                <span class="auction-live__timer-value">01</span>
+                <span class="auction-live__timer-text">Час</span>
+              </div>
+              <div class="auction-live__timer-part">
+                <span class="auction-live__timer-value">48</span>
+                <span class="auction-live__timer-text">Мин</span>
+              </div>
+              <div class="auction-live__timer-part">
+                <span class="auction-live__timer-value">47</span>
+                <span class="auction-live__timer-text">Сек</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="auction-live__button" type="button">Cделать ставку</button>
       </div>
     </div>
   </div>
