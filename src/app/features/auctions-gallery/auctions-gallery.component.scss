@@ -1,7 +1,17 @@
 @use "../../../styles/variables" as variables;
 
-.actions-gallery {
+.auctions-gallery {
   font-family: variables.$font-family-primary;
+
+  &__swiper {
+    position: relative;
+    margin-bottom: 52px;
+    display: none;
+
+    @media (width <= 491px) {
+      display: block;
+    }
+  }
 
   .container {
     padding: 0 12px 90px;
@@ -50,7 +60,7 @@
     }
 
     @media (width <= 491px) {
-      width: 281px;
+      display: none;
     }
   }
 
