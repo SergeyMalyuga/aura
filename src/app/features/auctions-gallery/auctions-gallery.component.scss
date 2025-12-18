@@ -26,7 +26,7 @@
 
   &__list {
     list-style: none;
-    margin: 0;
+    margin: 0 0 32px;
     padding: 0;
     display: flex;
     gap: 32px;
@@ -51,6 +51,42 @@
 
     @media (width <= 491px) {
       width: 281px;
+    }
+  }
+
+  &__button {
+    &-all-auctions {
+      display: block;
+      border: 5px solid variables.$link-hover;
+      background-color: transparent;
+      border-radius: 40px;
+      padding: 20px 54px;
+      max-width: 296px;
+      width: 100%;
+      color: variables.$text-main-color;
+      font-family: variables.$font-family-primary;
+      font-size: clamp(1rem, 0.8615rem + 0.607vw, 1.25rem);
+      font-weight: 700;
+      line-height: 100%;
+      letter-spacing: 0;
+      text-align: center;
+      margin: 0 auto;
+      cursor: pointer;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+
+      &:hover {
+        background-color: variables.$link-hover;
+      }
+
+      &:active {
+        border-color: variables.$link-active;
+        background-color: variables.$link-active;
+      }
+
+      @media (width <= 768px) {
+        width: clamp(12.5rem, 9.1768rem + 14.5675vw, 18.5rem);
+        padding: clamp(0.75rem, 0.2971rem + 1.9851vw, 1.25rem) clamp(1.3437rem, -0.2129rem + 6.8238vw, 3.0625rem);
+      }
     }
   }
 }
