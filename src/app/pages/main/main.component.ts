@@ -3,6 +3,7 @@ import {HeaderComponent} from '../../features/header/header.component';
 import {HeroComponent} from '../../features/hero/hero.component';
 import {AuctionLiveComponent} from '../../features/auction-live/auction-live.component';
 import {AuctionsGalleryComponent} from '../../features/auctions-gallery/auctions-gallery.component';
+import {NewStickersComponent} from '../../features/new-stickers/new-stickers.component';
 
 @Component({
   selector: 'app-main',
@@ -10,7 +11,8 @@ import {AuctionsGalleryComponent} from '../../features/auctions-gallery/auctions
     HeaderComponent,
     HeroComponent,
     AuctionLiveComponent,
-    AuctionsGalleryComponent
+    AuctionsGalleryComponent,
+    NewStickersComponent
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',
