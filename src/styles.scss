@@ -28,6 +28,31 @@ body {
   top: 30%;
 }
 
+.new-stickers__swiper .swiper {
+  margin-bottom: 64px;
+}
+
+.new-stickers__pagination .swiper-pagination-bullet {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid variables.$red;
+  border-radius: 40px;
+  padding: 10px 23px;
+  color: variables.$white;
+  font-family: variables.$font-family-primary;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+  opacity: 1;
+}
+
+.new-stickers__pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: variables.$red;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
