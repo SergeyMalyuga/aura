@@ -47,10 +47,18 @@ body {
   letter-spacing: 0;
   text-align: center;
   opacity: 1;
+
+  @media (width <= 768px) {
+    padding: 8px 15px;
+  }
 }
 
 .new-stickers__pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: variables.$red;
+}
+
+.swiper-wrapper {
+  align-items: center;
 }
 
 .visually-hidden {

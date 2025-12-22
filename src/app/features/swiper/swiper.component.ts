@@ -20,9 +20,15 @@ export class SwiperComponent implements AfterViewInit {
     const config = this.getSwiperConfig(this.type);
     this.swiper = new Swiper(target, {
       modules: [Pagination, Navigation],
-      slidesPerView: 1,
       ...config,
-      speed: 600
+      slidesPerView: 1,
+      speed: 600,
+      on: {
+        resize: (swiper) => {
+          console.log('Swiper resized, current width:', swiper.width);
+          console.log('Active breakpoint:', swiper.params.breakpoints);
+        }
+      }
     })
   }
 
@@ -39,13 +45,21 @@ export class SwiperComponent implements AfterViewInit {
       case SwiperType.NEW:
         return {
           spaceBetween: 10,
+          breakpoints: {
+            320: {
+              spaceBetween: 300
+            },
+            769: {
+              spaceBetween: 10
+            }
+          },
           pagination: {
             el: '.new-stickers__pagination',
             clickable: true,
             renderBullet: (index: number, className: string) => {
               const number = index + 1;
               return `<span class="${className}">${number}</span>`;
-            }
+            },
           },
         };
       default:

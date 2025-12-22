@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component, inject} from '@angular/core';
 import {SwiperComponent} from '../swiper/swiper.component';
 import {SwiperType} from '../../core/constants/const';
+import {ScreenService} from '../../core/services/screen-service';
 
 @Component({
   selector: 'app-new-stickers',
@@ -12,6 +13,6 @@ import {SwiperType} from '../../core/constants/const';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NewStickersComponent {
-
-  protected readonly SwiperType = SwiperType;
+  public readonly SwiperType = SwiperType;
+  public screenService = inject(ScreenService);
 }
