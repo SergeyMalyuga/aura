@@ -5,7 +5,9 @@
 @import "../node_modules/swiper/modules/pagination.min.css";
 @import "../node_modules/swiper/modules/pagination-element.min.css";
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -24,7 +26,8 @@ body {
   bottom: -30px;
 }
 
-.swiper-button-next, .swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
   top: 30%;
 }
 
@@ -53,7 +56,8 @@ body {
   }
 }
 
-.new-stickers__pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.new-stickers__pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: variables.$red;
 }
 

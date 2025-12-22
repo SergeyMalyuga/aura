@@ -1,8 +1,8 @@
 export enum AppRoute {
-  MAIN = "",
+  MAIN = '',
 }
 
 export enum SwiperType {
-  GALLERY = "GALLERY",
-  NEW = "NEW",
+  GALLERY = 'GALLERY',
+  NEW = 'NEW',
 }

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {HeaderComponent} from '../../features/header/header.component';
 import {HeroComponent} from '../../features/hero/hero.component';
 import {AuctionLiveComponent} from '../../features/auction-live/auction-live.component';
@@ -12,12 +12,10 @@ import {NewStickersComponent} from '../../features/new-stickers/new-stickers.com
     HeroComponent,
     AuctionLiveComponent,
     AuctionsGalleryComponent,
-    NewStickersComponent
+    NewStickersComponent,
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MainComponent {
-
-}
+export class MainComponent {}

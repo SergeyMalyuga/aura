@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { NewStickersComponent } from './new-stickers.component';
+import {NewStickersComponent} from './new-stickers.component';
 
 describe('NewStickersComponent', () => {
   let component: NewStickersComponent;
@@ -8,9 +8,8 @@ describe('NewStickersComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NewStickersComponent]
-    })
-    .compileComponents();
+      imports: [NewStickersComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(NewStickersComponent);
     component = fixture.componentInstance;

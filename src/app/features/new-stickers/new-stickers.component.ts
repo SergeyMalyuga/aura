@@ -5,12 +5,10 @@ import {ScreenService} from '../../core/services/screen-service';
 
 @Component({
   selector: 'app-new-stickers',
-  imports: [
-    SwiperComponent
-  ],
+  imports: [SwiperComponent],
   templateUrl: './new-stickers.component.html',
   styleUrl: './new-stickers.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NewStickersComponent {
   public readonly SwiperType = SwiperType;

@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SwiperComponent } from './swiper.component';
+import {SwiperComponent} from './swiper.component';
 
 describe('SwiperComponent', () => {
   let component: SwiperComponent;
@@ -8,9 +8,8 @@ describe('SwiperComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SwiperComponent]
-    })
-    .compileComponents();
+      imports: [SwiperComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(SwiperComponent);
     component = fixture.componentInstance;

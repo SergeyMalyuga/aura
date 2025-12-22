@@ -1,4 +1,4 @@
-import {AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, inject, Input} from '@angular/core';
+import {AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, inject, Input,} from '@angular/core';
 import Swiper from 'swiper';
 import {Navigation, Pagination} from 'swiper/modules';
 import {SwiperType} from '../../core/constants/const';
@@ -8,10 +8,10 @@ import {SwiperType} from '../../core/constants/const';
   imports: [],
   templateUrl: './swiper.component.html',
   styleUrl: './swiper.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SwiperComponent implements AfterViewInit {
-  @Input({required: true}) type!: SwiperType
+  @Input({ required: true }) type!: SwiperType;
   private swiper!: Swiper;
   private elementRef = inject(ElementRef);
 
@@ -23,35 +23,29 @@ export class SwiperComponent implements AfterViewInit {
       ...config,
       slidesPerView: 1,
       speed: 600,
-      on: {
-        resize: (swiper) => {
-          console.log('Swiper resized, current width:', swiper.width);
-          console.log('Active breakpoint:', swiper.params.breakpoints);
-        }
-      }
-    })
+    });
   }
 
   getSwiperConfig(type: SwiperType) {
     switch (type) {
       case SwiperType.GALLERY:
         return {
-          pagination: {el: '.swiper-pagination', clickable: true},
+          pagination: { el: '.swiper-pagination', clickable: true },
           navigation: {
             nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
-          }
+            prevEl: '.swiper-button-prev',
+          },
         };
       case SwiperType.NEW:
         return {
           spaceBetween: 10,
           breakpoints: {
             320: {
-              spaceBetween: 300
+              spaceBetween: 300,
             },
             769: {
-              spaceBetween: 10
-            }
+              spaceBetween: 10,
+            },
           },
           pagination: {
             el: '.new-stickers__pagination',
@@ -66,5 +60,4 @@ export class SwiperComponent implements AfterViewInit {
         return {};
     }
   }
-
 }

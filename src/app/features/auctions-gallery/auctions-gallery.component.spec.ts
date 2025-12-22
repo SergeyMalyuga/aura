@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { AuctionsGalleryComponent } from './auctions-gallery.component';
+import {AuctionsGalleryComponent} from './auctions-gallery.component';
 
 describe('AuctionsGalleryComponent', () => {
   let component: AuctionsGalleryComponent;
@@ -8,9 +8,8 @@ describe('AuctionsGalleryComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AuctionsGalleryComponent]
-    })
-    .compileComponents();
+      imports: [AuctionsGalleryComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(AuctionsGalleryComponent);
     component = fixture.componentInstance;

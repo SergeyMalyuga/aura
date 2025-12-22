@@ -82,7 +82,9 @@
       text-align: center;
       margin: 0 auto;
       cursor: pointer;
-      transition: background-color 0.3s ease, border-color 0.3s ease;
+      transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
 
       &:hover {
         background-color: variables.$link-hover;
@@ -95,7 +97,8 @@
 
       @media (width <= 768px) {
         width: clamp(12.5rem, 9.1768rem + 14.5675vw, 18.5rem);
-        padding: clamp(0.75rem, 0.2971rem + 1.9851vw, 1.25rem) clamp(1.3437rem, -0.2129rem + 6.8238vw, 3.0625rem);
+        padding: clamp(0.75rem, 0.2971rem + 1.9851vw, 1.25rem)
+          clamp(1.3437rem, -0.2129rem + 6.8238vw, 3.0625rem);
       }
     }
   }
@@ -122,9 +125,8 @@
     }
   }
 
-
   &__info {
-    border-radius:  0 0 40px 40px;
+    border-radius: 0 0 40px 40px;
     background: variables.$text-main-color;
     color: variables.$white;
     padding: 16px;
@@ -137,7 +139,8 @@
     margin: 0 0 16px;
   }
 
-  &__title, &__price {
+  &__title,
+  &__price {
     font-size: 20px;
     font-weight: 700;
     line-height: 100%;

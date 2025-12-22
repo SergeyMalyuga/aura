@@ -4,12 +4,10 @@ import {SwiperType} from '../../core/constants/const';
 
 @Component({
   selector: 'app-auctions-gallery',
-  imports: [
-    SwiperComponent
-  ],
+  imports: [SwiperComponent],
   templateUrl: './auctions-gallery.component.html',
   styleUrl: './auctions-gallery.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AuctionsGalleryComponent {
   protected readonly SwiperType = SwiperType;

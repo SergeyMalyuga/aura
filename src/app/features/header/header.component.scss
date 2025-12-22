@@ -104,7 +104,9 @@
     text-align: center;
     margin-left: auto;
     cursor: pointer;
-    transition: color 0.3s ease, background-color 0.3s ease;
+    transition:
+      color 0.3s ease,
+      background-color 0.3s ease;
 
     &:focus {
       outline: none;
@@ -113,7 +115,6 @@
     &:focus-visible {
       outline: 2px solid variables.$link-active;
       outline-offset: 4px;
-
     }
 
     &:hover {
@@ -138,7 +139,6 @@
       background-color: transparent;
       color: variables.$text-main-color;
       margin-right: 12px;
-
 
       &:hover {
         background-color: transparent;

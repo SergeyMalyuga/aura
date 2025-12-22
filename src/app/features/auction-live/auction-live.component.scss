@@ -1,6 +1,5 @@
 @use "../../../styles/variables";
 
-
 .container {
   padding: 90px 12px;
 
@@ -37,7 +36,7 @@
 
       @media (width <= 768px) {
         font-size: clamp(1.875rem, 0.1768rem + 7.4442vw, 3.75rem);
-        line-height: clamp(2.25rem, 0.2122rem + 8.933vw, 4.5rem);;
+        line-height: clamp(2.25rem, 0.2122rem + 8.933vw, 4.5rem);
       }
 
       span {
@@ -142,7 +141,7 @@
       width: 100%;
 
       @media (width <= 768px) {
-        width: clamp(1.5rem, 0.1414rem + 5.9553vw, 3rem);;
+        width: clamp(1.5rem, 0.1414rem + 5.9553vw, 3rem);
       }
 
       img {
@@ -199,7 +198,7 @@
     }
 
     @media (width <= 768px) {
-      width: clamp(10.625rem, 7.3418rem + 14.3921vw, 14.25rem);;
+      width: clamp(10.625rem, 7.3418rem + 14.3921vw, 14.25rem);
     }
   }
 
@@ -314,7 +313,7 @@
       }
 
       @media (width <= 768px) {
-        width:  clamp(12.5rem, -2.2177rem + 64.5161vw, 28.75rem);
+        width: clamp(12.5rem, -2.2177rem + 64.5161vw, 28.75rem);
         padding: clamp(1rem, 0.0943rem + 3.9702vw, 2rem);
       }
     }
@@ -339,7 +338,8 @@
     text-align: center;
     cursor: pointer;
 
-    &::before, &::after {
+    &::before,
+    &::after {
       content: "";
       display: block;
       position: absolute;
@@ -376,7 +376,8 @@
     @media (width <= 768px) {
       font-size: clamp(1rem, 0.7736rem + 0.9926vw, 1.25rem);
       width: clamp(12.5rem, 7.0658rem + 23.8213vw, 18.5rem);
-      padding: clamp(0.9375rem, 0.3714rem + 2.4814vw, 1.5625rem) clamp(1.625rem, 0.04rem + 6.9479vw, 3.375rem);
+      padding: clamp(0.9375rem, 0.3714rem + 2.4814vw, 1.5625rem)
+        clamp(1.625rem, 0.04rem + 6.9479vw, 3.375rem);
     }
   }
 }

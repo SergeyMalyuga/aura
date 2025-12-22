@@ -1,78 +1,195 @@
 <section class="new-stickers">
   <div class="container">
     <h2 class="new-stickers__title-main">Новые стикеры</h2>
-      <div class="new-stickers__slider">
-        <app-swiper [type]="SwiperType.NEW" class="new-stickers__swiper">
-          @if (screenService.isMobile()) {
-            <div class="new-stickers__slide swiper-slide">
-                <img src="./assets/images/raster/new-sticker-slide-ghost-768.png" alt="Стикер 'Ghost'" loading="lazy">
-                <img src="./assets/images/raster/new-sticker-slide-ghost-2-768.png" alt="Стикер 'Ghost'" loading="lazy">
-            </div>
-            <div class="new-stickers__slide swiper-slide">
-              <img src="./assets/images/raster/new-sticker-slide-parental-768.png" alt="Стикер 'Ghost'" loading="lazy">
-            </div>
-            <div class="new-stickers__slide swiper-slide">
-                <img src="./assets/images/raster/new-sticker-slide-chrome-is-dead-768.png" alt="Стикер 'Chrome is dead'" loading="lazy">
-            </div>
-            <div class="new-stickers__slide swiper-slide">
-                <img src="./assets/images/raster/new-sticker-slide-Infinity-768.png" alt="Стикер 'Infinity'" loading="lazy">
-              <img src="./assets/images/raster/new-sticker-slide-circle-768.png" alt="Стикер 'Circle'" loading="lazy">
-            </div>
-            <div class="new-stickers__slide swiper-slide">
-                <img src="./assets/images/raster/new-sticker-slide-global-768.png" alt="Стикер 'Global'" loading="lazy">
-                <img src="./assets/images/raster/new-sticker-slide-Frankenstein-768.png" alt="Стикер 'Frankenstein'" loading="lazy">
-            </div>
-            <div class="new-stickers__slide swiper-slide">
-                <img src="./assets/images/raster/new-sticker-slide-new-wave-768.png" alt="Стикер 'Frankenstein'" loading="lazy">
-            </div>
-          } @else {
-            <div class="new-stickers__slide swiper-slide">
-              <picture>
-                <source srcset="./assets/images/raster/new-sticker-slide-ghost-1024.png" media="(max-width: 1440px)">
-                <img src="./assets/images/raster/new-sticker-slide-ghost-1920.png" alt="Стикер 'Ghost'" loading="lazy">
-              </picture>
-              <picture>
-                <source srcset="./assets/images/raster/new-sticker-slide-ghost-2-1024.png" media="(max-width: 1440px)">
-                <img src="./assets/images/raster/new-sticker-slide-ghost-2-1920.png" alt="Стикер 'Ghost'" loading="lazy">
-              </picture>
-              <picture>
-                <source srcset="./assets/images/raster/new-stickers-slide-parentel-1024.png" media="(max-width: 1440px)">
-                <img src="./assets/images/raster/new-stickers-slide-parentel-1920.png" alt="Стикер 'Ghost'" loading="lazy">
-              </picture>
-            </div>
-            <div class="new-stickers__slide swiper-slide">
-              <picture>
-                <source srcset="./assets/images/raster/new-sticker-slide-chrome-is-dead-1024.png" media="(max-width: 1440px)">
-                <img src="./assets/images/raster/new-sticker-slide-chrome-is-dead-1920.png" alt="Стикер 'Chrome is dead'" loading="lazy">
-              </picture>
-              <picture>
-                <source srcset="./assets/images/raster/new-sticker-slide-infinity-1024.png" media="(max-width: 1440px)">
-                <img src="./assets/images/raster/new-sticker-slide-Infinity-1920.png" alt="Стикер 'Infinity'" loading="lazy">
-              </picture>
-            </div>
-            <div class="new-stickers__slide swiper-slide">
-              <picture>
-                <source srcset="./assets/images/raster/new-sticker-slide-circle-1024.png" media="(max-width: 1440px)">
-                <img src="./assets/images/raster/new-sticker-slide-circle-1920.png" alt="Стикер 'Circle'" loading="lazy">
-              </picture>
-              <picture>
-                <source srcset="./assets/images/raster/new-sticker-slide-global-1024.png" media="(max-width: 1440px)">
-                <img src="./assets/images/raster/new-sticker-slide-global-1920.png" alt="Стикер 'Global'" loading="lazy">
-              </picture>
-              <picture>
-                <source srcset="./assets/images/raster/new-sticker-slide-Frankenstein-1024.png" media="(max-width: 1440px)">
-                <img src="./assets/images/raster/new-sticker-slide-Frankenstein-1920.png" alt="Стикер 'Frankenstein'" loading="lazy">
-              </picture>
-            </div>
-            <div class="new-stickers__slide swiper-slide">
-              <picture>
-                <source srcset="./assets/images/raster/new-sticker-slide-new-wave-1024.png" media="(max-width: 1440px)">
-                <img src="./assets/images/raster/new-sticker-slide-new-wave-1920.png" alt="Стикер 'Frankenstein'" loading="lazy">
-              </picture>
-            </div>
-          }
-        </app-swiper>
-        <div class="new-stickers__pagination new-stickers__pagination--new-stickers"></div>
-      </div>
+    <div class="new-stickers__slider">
+      <app-swiper [type]="SwiperType.NEW" class="new-stickers__swiper">
+        @if (screenService.isMobile()) {
+          <div class="new-stickers__slide swiper-slide">
+            <img
+              src="./assets/images/raster/new-sticker-slide-ghost-768.png"
+              alt="Стикер 'Ghost'"
+              loading="lazy"
+            />
+            <img
+              src="./assets/images/raster/new-sticker-slide-ghost-2-768.png"
+              alt="Стикер 'Ghost'"
+              loading="lazy"
+            />
+          </div>
+          <div class="new-stickers__slide swiper-slide">
+            <img
+              src="./assets/images/raster/new-sticker-slide-parental-768.png"
+              alt="Стикер 'Ghost'"
+              loading="lazy"
+            />
+          </div>
+          <div class="new-stickers__slide swiper-slide">
+            <img
+              src="./assets/images/raster/new-sticker-slide-chrome-is-dead-768.png"
+              alt="Стикер 'Chrome is dead'"
+              loading="lazy"
+            />
+          </div>
+          <div class="new-stickers__slide swiper-slide">
+            <img
+              src="./assets/images/raster/new-sticker-slide-Infinity-768.png"
+              alt="Стикер 'Infinity'"
+              loading="lazy"
+            />
+            <img
+              src="./assets/images/raster/new-sticker-slide-circle-768.png"
+              alt="Стикер 'Circle'"
+              loading="lazy"
+            />
+          </div>
+          <div class="new-stickers__slide swiper-slide">
+            <img
+              src="./assets/images/raster/new-sticker-slide-global-768.png"
+              alt="Стикер 'Global'"
+              loading="lazy"
+            />
+            <img
+              src="./assets/images/raster/new-sticker-slide-Frankenstein-768.png"
+              alt="Стикер 'Frankenstein'"
+              loading="lazy"
+            />
+          </div>
+          <div class="new-stickers__slide swiper-slide">
+            <img
+              src="./assets/images/raster/new-sticker-slide-new-wave-768.png"
+              alt="Стикер 'Frankenstein'"
+              loading="lazy"
+            />
+          </div>
+        } @else {
+          <div class="new-stickers__slide swiper-slide">
+            <picture>
+              <source
+                srcset="./assets/images/raster/new-sticker-slide-ghost-1024.png"
+                media="(max-width: 1440px)"
+              />
+              <img
+                src="./assets/images/raster/new-sticker-slide-ghost-1920.png"
+                alt="Стикер 'Ghost'"
+                loading="lazy"
+              />
+            </picture>
+            <picture>
+              <source
+                srcset="
+                  ./assets/images/raster/new-sticker-slide-ghost-2-1024.png
+                "
+                media="(max-width: 1440px)"
+              />
+              <img
+                src="./assets/images/raster/new-sticker-slide-ghost-2-1920.png"
+                alt="Стикер 'Ghost'"
+                loading="lazy"
+              />
+            </picture>
+            <picture>
+              <source
+                srcset="
+                  ./assets/images/raster/new-stickers-slide-parentel-1024.png
+                "
+                media="(max-width: 1440px)"
+              />
+              <img
+                src="./assets/images/raster/new-stickers-slide-parentel-1920.png"
+                alt="Стикер 'Ghost'"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <div class="new-stickers__slide swiper-slide">
+            <picture>
+              <source
+                srcset="
+                  ./assets/images/raster/new-sticker-slide-chrome-is-dead-1024.png
+                "
+                media="(max-width: 1440px)"
+              />
+              <img
+                src="./assets/images/raster/new-sticker-slide-chrome-is-dead-1920.png"
+                alt="Стикер 'Chrome is dead'"
+                loading="lazy"
+              />
+            </picture>
+            <picture>
+              <source
+                srcset="
+                  ./assets/images/raster/new-sticker-slide-infinity-1024.png
+                "
+                media="(max-width: 1440px)"
+              />
+              <img
+                src="./assets/images/raster/new-sticker-slide-Infinity-1920.png"
+                alt="Стикер 'Infinity'"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <div class="new-stickers__slide swiper-slide">
+            <picture>
+              <source
+                srcset="
+                  ./assets/images/raster/new-sticker-slide-circle-1024.png
+                "
+                media="(max-width: 1440px)"
+              />
+              <img
+                src="./assets/images/raster/new-sticker-slide-circle-1920.png"
+                alt="Стикер 'Circle'"
+                loading="lazy"
+              />
+            </picture>
+            <picture>
+              <source
+                srcset="
+                  ./assets/images/raster/new-sticker-slide-global-1024.png
+                "
+                media="(max-width: 1440px)"
+              />
+              <img
+                src="./assets/images/raster/new-sticker-slide-global-1920.png"
+                alt="Стикер 'Global'"
+                loading="lazy"
+              />
+            </picture>
+            <picture>
+              <source
+                srcset="
+                  ./assets/images/raster/new-sticker-slide-Frankenstein-1024.png
+                "
+                media="(max-width: 1440px)"
+              />
+              <img
+                src="./assets/images/raster/new-sticker-slide-Frankenstein-1920.png"
+                alt="Стикер 'Frankenstein'"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <div class="new-stickers__slide swiper-slide">
+            <picture>
+              <source
+                srcset="
+                  ./assets/images/raster/new-sticker-slide-new-wave-1024.png
+                "
+                media="(max-width: 1440px)"
+              />
+              <img
+                src="./assets/images/raster/new-sticker-slide-new-wave-1920.png"
+                alt="Стикер 'Frankenstein'"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        }
+      </app-swiper>
+      <div
+        class="new-stickers__pagination new-stickers__pagination--new-stickers"
+      ></div>
+    </div>
   </div>
 </section>

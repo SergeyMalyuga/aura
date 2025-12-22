@@ -1,12 +1,10 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 @Component({
   selector: 'app-auction-live',
   imports: [],
   templateUrl: './auction-live.component.html',
   styleUrl: './auction-live.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AuctionLiveComponent {
-
-}
+export class AuctionLiveComponent {}

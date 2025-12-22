@@ -1,13 +1,17 @@
 // ===== COLOR =====
 $text-main-color: rgb(7 6 11 / 100%);
 $white: rgb(255 255 255 / 100%);
-$red: rgb(209 49  48 / 100%);
+$red: rgb(209 49 48 / 100%);
 $grey-light: rgb(196 196 196 / 100%);
 $grey-middle: rgb(149 149 157 / 100%);
 $grey: rgb(237 237 242 / 100%);
 $link-hover: rgb(70 244 219 / 100%);
 $link-active: rgb(87 210 114 / 100%);
-$button-gradient: linear-gradient(180.00deg, rgb(70 244 219 / 100%) 27%, rgb(87 210 114.06 / 100%) 100%);
+$button-gradient: linear-gradient(
+  180deg,
+  rgb(70 244 219 / 100%) 27%,
+  rgb(87 210 114.06 / 100%) 100%
+);
 
 /* Фон */
 
@@ -16,4 +20,3 @@ $button-gradient: linear-gradient(180.00deg, rgb(70 244 219 / 100%) 27%, rgb(87 
 // ===== TYPOGRAPHY =====
 $font-family-primary: "Muller", sans-serif;
 $font-family-secondary: "Russo One", sans-serif;
-
