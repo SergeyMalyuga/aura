@@ -38,6 +38,7 @@ export class SwiperComponent implements AfterViewInit {
         };
       case SwiperType.NEW:
         return {
+          spaceBetween: 10,
           pagination: {
             el: '.new-stickers__pagination',
             clickable: true,
