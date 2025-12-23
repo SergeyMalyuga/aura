@@ -4,6 +4,7 @@ import {HeroComponent} from '../../features/hero/hero.component';
 import {AuctionLiveComponent} from '../../features/auction-live/auction-live.component';
 import {AuctionsGalleryComponent} from '../../features/auctions-gallery/auctions-gallery.component';
 import {NewStickersComponent} from '../../features/new-stickers/new-stickers.component';
+import {SubscribeComponent} from '../../features/subscribe/subscribe.component';
 
 @Component({
   selector: 'app-main',
@@ -13,6 +14,7 @@ import {NewStickersComponent} from '../../features/new-stickers/new-stickers.com
     AuctionLiveComponent,
     AuctionsGalleryComponent,
     NewStickersComponent,
+    SubscribeComponent,
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',
