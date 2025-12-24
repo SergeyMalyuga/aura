@@ -21,6 +21,11 @@
     @media (width <= 980px) {
       background-position: right clamp(-12.5rem, -61.1792rem + 101.4151vw, 0.9375rem) center;
     }
+
+    @media (width <= 768px) {
+      padding: 32px 12px 200px;
+      background-position: bottom -150px center;
+    }
   }
 
   &__title {
@@ -50,15 +55,24 @@
 
   &__label {
     &--accept-policy {
-      display: flex;
       position: relative;
-      align-items: center;
-      gap: 8px;
       cursor: pointer;
+      padding-left: 22px;
+      line-height: 12px;
+      color: variables.$white;
+      font-family: variables.$font-family-primary;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 12px;
+      letter-spacing: 0;
+      text-align: left;
 
       &::before {
         content: "";
         display: block;
+        position: absolute;
+        top: -1px;
+        left: -1px;
         width: 14px;
         height: 14px;
         border: 1px solid variables.$white;
@@ -67,18 +81,29 @@
       &::after {
         content: "";
         position: absolute;
-        top: 0;
-        left: 0;
+        top: -1px;
+        left: -1px;
         display: block;
         width: 14px;
         height: 14px;
         background-image: url("../../../assets/images/vector/subscribe-accept.svg");
         background-repeat: no-repeat;
         background-position: center;
-        background-size: cover;
+
         opacity: 0;
         transition: opacity 0.3s ease;
       }
+
+      @media (width <= 768px) {
+        &::before, &::after {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+
+    @media (width <= 768px) {
+      font-size: clamp(0.75rem, 0.5236rem + 0.9926vw, 1rem);
     }
   }
 
@@ -94,6 +119,10 @@
     line-height: 100%;
     letter-spacing: 0;
     text-align: left;
+
+    @media (width <= 768px) {
+      padding: clamp(0.625rem, -0.2241rem + 3.7221vw, 1.5625rem) 10px clamp(0.625rem, -0.2241rem + 3.7221vw, 1.5625rem) 32px;
+    }
 
     &--accept-policy:checked + .subscribe__label--accept-policy::after {
       opacity: 1;
