@@ -19,7 +19,16 @@
         <img src="./assets/images/raster/become-author-hande-1920.png" alt="" loading="lazy">
       </picture>
       <form class="become-author__form">
-
+        <label for="become-author__input-file" class="become-author__label-file">
+          <div class="become-author__label-file-icon"></div>
+          <span class="become-author__label-file-text">Прикрепить работы (.jpeg / .png)</span>
+        </label>
+        <input id="become-author__input-file" class="become-author__input-file visually-hidden" type="file"/>
+        <label for="become-author__input-social" class="become-author-label-social visually-hidden">Ваши контакты в
+          соцсетях</label>
+        <input id="become-author__input-social" class="become-author__input-social" type="text"
+               placeholder="@telegram_nickname"/>
+        <button class="button become-author__button-send" type="button">Отправить</button>
       </form>
     </div>
   </div>

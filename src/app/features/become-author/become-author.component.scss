@@ -26,10 +26,20 @@
     text-align: left;
   }
 
-/*  &__subtitle, &__text {
-    max-width: 788px;
-    width: 100%;
-  }*/
+  /*  &__subtitle, &__text {
+      max-width: 788px;
+      width: 100%;
+    }*/
+
+  &__image {
+    &-info {
+      max-width: 624px;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
 
   &__subtitle {
     font-size: 20px;
@@ -56,5 +66,86 @@
 
   &__info, &__wrapper {
     width: calc((100% - 32px) / 2);
+  }
+
+  &__label {
+    &-file {
+      margin-bottom: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+      width: 100%;
+      padding: 98px 0;
+      min-height: 342px;
+      border-radius: 40px;
+      background: variables.$grey;
+      cursor: pointer;
+
+      &:hover {
+        .become-author__label-file-icon {
+          border-color: variables.$link-hover;
+
+          &::before {
+            background-color: variables.$link-hover;
+          }
+        }
+      }
+
+      &-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: variables.$white;
+        border: 2px solid transparent;
+        transition: border-color 0.3s ease;
+
+        &::before {
+          content: "";
+          display: block;
+          top: 0;
+          left: 0;
+          width: 40px;
+          height: 40px;
+          background-color: variables.$grey;
+          mask-image: url("../../../assets/images/vector/become-author-cross.svg");
+          mask-repeat: no-repeat;
+          mask-size: cover;
+          mask-position: center;
+          transition: background 0.3s ease;
+        }
+      }
+
+      &-text {
+        color: variables.$grey-middle;
+        font-family: variables.$font-family-primary;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0;
+        text-align: center;
+      }
+    }
+  }
+
+  &__input {
+    &-social {
+      border: none;
+      width: 100%;
+      border-radius: 40px;
+      background: variables.$grey;
+      padding: 25px 5px 25px 32px;
+      color: variables.$grey-dark;
+      font-family: Muller;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 100%;
+      letter-spacing: 0;
+      text-align: left;
+      margin-bottom: 32px;
+    }
   }
 }
