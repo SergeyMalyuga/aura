@@ -1,0 +1,110 @@
+@use '../../../styles/variables' as variables;
+
+.top-sales {
+  background-color: variables.$text-main-color;
+  font-family: variables.$font-family-primary;
+  color: variables.$text-main-color;
+
+  &__title {
+    &-main {
+      color: variables.$white;
+      font-family: variables.$font-family-secondary;
+      font-size: 60px;
+      font-weight: 400;
+      line-height: 72px;
+      letter-spacing: 0;
+      text-align: left;
+      margin: 0 0 32px;
+
+      @media (width <= 768px) {
+        font-size: clamp(1.875rem, 0.1768rem + 7.4442vw, 3.75rem);
+        line-height: clamp(2.25rem, 0.2122rem + 8.933vw, 4.5rem);
+        margin-bottom: clamp(1rem, 0.0943rem + 3.9702vw, 2rem);;
+      }
+    }
+
+    &-sticker {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 100%;
+      letter-spacing: 0;
+      text-align: left;
+      margin: 0 0 9px;
+
+   /*   @media (width <= 768px) {
+        font-size: clamp(1.25rem, -0.335rem + 6.9479vw, 3rem);
+      }*/
+
+      @media (width <= 1024px) {
+        font-size: clamp(1.25rem, -4rem + 10.9375vw, 3rem);
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: calc((100% - 32px) / 2);
+    min-height: 174px;
+  }
+
+  &__wrapper {
+    &-image {
+      max-width: 142px;
+      width: 100%;
+      margin-right: 32px;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &__sticker {
+    display: flex;
+    align-items: center;
+    border-radius: 40px;
+    background: variables.$white;
+    height: 100%;
+
+    @media (width <= 625px) {
+      flex-direction: column;
+    }
+  }
+
+  &__owner {
+    display: flex;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: left;
+    margin-bottom: 9px;
+  }
+
+  &__price {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: left;
+
+    span {
+      color: variables.$grey-middle;
+    }
+
+    @media (width <= 768px) {
+      font-size: clamp(0.75rem, 0.2971rem + 1.9851vw, 1.25rem);
+    }
+  }
+}

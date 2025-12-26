@@ -6,6 +6,7 @@ import {AuctionsGalleryComponent} from '../../features/auctions-gallery/auctions
 import {NewStickersComponent} from '../../features/new-stickers/new-stickers.component';
 import {SubscribeComponent} from '../../features/subscribe/subscribe.component';
 import {BecomeAuthorComponent} from '../../features/become-author/become-author.component';
+import {TopSalesComponent} from '../../features/top-sales/top-sales.component';
 
 @Component({
   selector: 'app-main',
@@ -17,6 +18,7 @@ import {BecomeAuthorComponent} from '../../features/become-author/become-author.
     NewStickersComponent,
     SubscribeComponent,
     BecomeAuthorComponent,
+    TopSalesComponent,
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',
