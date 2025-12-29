@@ -5,6 +5,18 @@
   font-family: variables.$font-family-primary;
   color: variables.$text-main-color;
 
+  .container {
+    padding: 90px 12px;
+
+    @media (width <= 1024px) {
+      padding: 90px 36px;
+    }
+
+    @media (width <= 768px) {
+      padding: clamp(2rem, -1.2832rem + 14.3921vw, 5.625rem) clamp(0.75rem, -0.6086rem + 5.9553vw, 2.25rem);
+    }
+  }
+
   &__title {
     &-main {
       color: variables.$white;
@@ -30,10 +42,6 @@
       letter-spacing: 0;
       text-align: left;
       margin: 0 0 9px;
-
-   /*   @media (width <= 768px) {
-        font-size: clamp(1.25rem, -0.335rem + 6.9479vw, 3rem);
-      }*/
 
       @media (width <= 1024px) {
         font-size: clamp(1.25rem, -4rem + 10.9375vw, 3rem);
@@ -63,8 +71,24 @@
 
       img {
         display: block;
+        max-width: 100%;
+      }
+
+      @media (width <= 625px) {
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        background-color: variables.$grey;
         width: 100%;
-        height: auto;
+        margin-right: 0;
+        margin-bottom: 16px;
+      }
+    }
+
+    &-info {
+      @media (width <= 768px) {
+        padding: 0 16px;
+        margin-bottom: 16px;
       }
     }
   }
@@ -73,8 +97,13 @@
     display: flex;
     align-items: center;
     border-radius: 40px;
+    overflow: hidden;
     background: variables.$white;
     height: 100%;
+
+    @media (width <= 768px) {
+      border-radius: clamp(1.125rem, -0.1203rem + 5.4591vw, 2.5rem);
+    }
 
     @media (width <= 625px) {
       flex-direction: column;
