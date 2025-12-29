@@ -8,6 +8,7 @@ import {SubscribeComponent} from '../../features/subscribe/subscribe.component';
 import {BecomeAuthorComponent} from '../../features/become-author/become-author.component';
 import {TopSalesComponent} from '../../features/top-sales/top-sales.component';
 import {TopRequirementComponent} from '../../features/top-requirement/top-requirement.component';
+import {FooterComponent} from '../../features/footer/footer.component';
 
 @Component({
   selector: 'app-main',
@@ -21,6 +22,7 @@ import {TopRequirementComponent} from '../../features/top-requirement/top-requir
     BecomeAuthorComponent,
     TopSalesComponent,
     TopRequirementComponent,
+    FooterComponent,
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',
