@@ -7,6 +7,7 @@ import {NewStickersComponent} from '../../features/new-stickers/new-stickers.com
 import {SubscribeComponent} from '../../features/subscribe/subscribe.component';
 import {BecomeAuthorComponent} from '../../features/become-author/become-author.component';
 import {TopSalesComponent} from '../../features/top-sales/top-sales.component';
+import {TopRequirementComponent} from '../../features/top-requirement/top-requirement.component';
 
 @Component({
   selector: 'app-main',
@@ -19,6 +20,7 @@ import {TopSalesComponent} from '../../features/top-sales/top-sales.component';
     SubscribeComponent,
     BecomeAuthorComponent,
     TopSalesComponent,
+    TopRequirementComponent,
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',

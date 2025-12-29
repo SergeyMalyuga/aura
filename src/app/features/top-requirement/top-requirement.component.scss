@@ -1,0 +1,97 @@
+@use '../../../styles/variables' as variables;
+
+.top-requirement {
+  color: variables.$white;
+  font-family: variables.$font-family-primary;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: left;
+  background-color: variables.$grey-deep;
+
+  @media (width <= 768px) {
+    font-size: clamp(1rem, 0.8868rem + 0.4963vw, 1.125rem);
+  }
+
+  .container {
+    background: url("../../../assets/images/raster/top-requirement-bg.png") no-repeat calc(100% - 12px) center / 460px 160px content-box;
+    padding: 32px 12px;
+    @media (width <= 1024px) {
+      padding: 32px 36px;
+      background: url("../../../assets/images/raster/top-requirement-bg.png") no-repeat right center / 460px 160px content-box;
+    }
+
+    @media (width <= 924px) {
+      background: url("../../../assets/images/raster/top-requirement-bg.png") no-repeat calc(100% - clamp(-12.5rem, -74.0385rem + 128.2051vw, 0rem)) center / 460px 160px content-box;
+    }
+
+    @media (width <= 768px) {
+      padding: 32px  clamp(0.75rem, -0.6086rem + 5.9553vw, 2.25rem) 167px;
+      background: url("../../../assets/images/raster/top-requirement-bg-768.png") no-repeat center bottom 32px / 296px 103px;
+    }
+
+
+
+
+  }
+
+  &__title {
+    &-main {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 100%;
+      letter-spacing: 0;
+      text-align: left;
+      margin: 0 0 16px;
+
+      @media (width <= 768px) {
+        font-size: clamp(1.25rem, 1.0236rem + 0.9926vw, 1.5rem);
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    &--collections {
+      &::before {
+        background-image: url("../../../assets/images/vector/top-requirement-collections.svg");
+      }
+    }
+
+    &--emoticon {
+      &::before {
+        background-image: url("../../../assets/images/vector/top-requirement-emoticon.svg");
+      }
+    }
+
+    &--verified {
+      &::before {
+        background-image: url("../../../assets/images/vector/top-requirement-verified.svg");
+      }
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 32px;
+      height: 32px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}
