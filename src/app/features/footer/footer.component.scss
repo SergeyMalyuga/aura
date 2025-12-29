@@ -1,0 +1,96 @@
+@use '../../../styles/variables' as variables;
+
+.footer {
+  color: variables.$text-main-color;
+  font-family: variables.$font-family-primary;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: left;
+
+  @media (width <= 768px) {
+    font-size: clamp(1rem, 0.7736rem + 0.9926vw, 1.25rem);
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (width <= 400px) {
+      flex-direction: column;
+    }
+  }
+
+  &__wrapper {
+    &-top {
+      background-color: variables.$link-hover;
+      padding: 20px 0;
+    }
+
+    &-bottom {
+      background-color: variables.$text-main-color;
+      padding: 8px 0;
+      text-align: center;
+
+      small {
+        color: variables.$grey;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: 0;
+        text-align: left;
+      }
+    }
+  }
+
+  &__nav {
+    width: 100%;
+  }
+
+  &__logo {
+    &-link {
+      display: block;
+      max-width: 100px;
+      width: 100%;
+      cursor: pointer;
+
+      @media (width <= 400px) {
+        margin-bottom: 20px;
+      }
+
+      @media (width <= 768px) {
+        width: clamp(4.6875rem, 3.2723rem + 6.2035vw, 6.25rem);
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+
+    @media (width <= 400px) {
+      border-top: 1px solid variables.$text-main-color;
+      padding: 10px 0;
+    }
+  }
+
+  &__link {
+    &-nav {
+      text-decoration: none;
+      color: variables.$text-main-color;
+      cursor: pointer;
+    }
+  }
+}
